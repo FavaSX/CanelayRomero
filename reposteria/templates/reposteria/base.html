@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canela y Romero</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'reposteria/css/styleindex.css'%}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" type="image/png" href="{% static 'reposteria/images/Canela_y_Romero_Circle.png'%}">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light my-navbar fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{%url 'home'%}">
+                <img src="{% static 'reposteria/images/Canela_y_Romero.jpg'%}" alt="LOGO_CANELA" class="my-logo mr-3">
+                <span class="navbar-text">Canela y Romero</span>
+            </a>
+            <div class="separator d-lg-none"></div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'home'%}#tortas">Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'sobre_nosotros'%}">Sobre Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{%url 'contacto'%}">Contáctanos</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user"></i> Iniciar Sesión
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{%url 'iniciar_sesion'%}">Iniciar Sesión</a>
+                            <a class="dropdown-item" href="{%url 'registrarse'%}">Registrarse</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="abrirCarrito"><i class="fas fa-shopping-cart"></i> Carrito</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="modal fade" id="modalCarrito" tabindex="-1" role="dialog" aria-labelledby="modalCarritoLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalCarritoLabel">Carrito de Compras</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- Contenido del carrito -->
+                    <div id="carritoContenido">
+                        <!-- Aquí se mostrarán los productos agregados al carrito -->
+                    </div>
+                    <hr>
+                    <p>Total: $<span id="totalCarrito">0.00</span></p>
+                </div>
+                <div class="modal-footer">
+                    <a href="vistas/carrito_de_compras.html" class="btn btn-primary">Ir al Carrito</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="follow-us-container">
+        <a class="follow-us" href="https://www.instagram.com/canelayromero.cl" target="_blank">
+            <i class="fab fa-instagram"></i> Síguenos!
+        </a>
+    </div>
+
+    <div class="main-content">
+
+        {% block contenido %}
+        {% endblock %}
+
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="row align-items-center"> <!-- Alinea los elementos verticalmente -->
+                <div class="col-md-3 text-center">
+                    <img src="{%static 'reposteria/images/Canela_y_Romero_Circle.png'%}" alt="Logo" class="footer-logo">
+                </div>
+                <div class="col-md-4 text-center">
+                    <a href="preguntas_frecuentes.html" class="btn btn-link">Preguntas Frecuentes</a>
+                    <!-- Agregado un salto de línea para separar los enlaces -->
+                    <br>
+                    <a href="#" class="btn btn-link">Contacto</a>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img src="{%static 'reposteria/images/Furina.png'%}" alt="Derechos Reservados"
+                        class="copyright-img">
+                    <p style="display: inline;">&copy; 2024 Página creada por Fava</p>
+                    <!-- Agregado el texto de derechos reservados en la misma línea con la imagen -->
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="{% static 'reposteria/js/funciones.js' %}"></script>
+    <script src="{% static 'reposteria/js/validacion.js' %}"></script>
+    <script src="{% static 'reposteria/js/funciones.js' %}"></script>
+</body>
+
+</html>

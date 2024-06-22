@@ -1,0 +1,432 @@
+.my-navbar {
+  background-color: #dcc6ae;
+  padding: 10px 0;
+}
+
+.my-logo {
+  max-width: 70px;
+}
+
+.my-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.my-nav .nav-item {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.my-navbar .navbar-nav .nav-link,
+.my-navbar .navbar-text {
+  font-size: 18.5px;
+  font-weight: bold;
+  color: #000;
+}
+
+.my-navbar .navbar-nav .nav-link:hover {
+  color: #0400ff;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 98px;
+}
+
+.main-content {
+  flex: 1;
+}
+
+.carousel-item {
+  border-radius: 0 !important;
+}
+
+.text-left {
+  padding: 20px;
+}
+
+.img-fluid {
+  max-width: 65%;
+  height: auto;
+}
+
+.text-left h2 {
+  color: #333;
+  font-size: 28px;
+}
+
+.text-left p {
+  color: #666;
+  font-size: 18px;
+}
+
+@media (min-width: 992px) {
+  .bg-light {
+    min-height: 100%;
+  }
+
+  .carousel-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-bottom: 20px;
+  }
+
+  .product-container {
+    width: 200px;
+    height: 350px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+
+  .product-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  .carousel-control-prev {
+    left: 0;
+  }
+
+  .carousel-control-next {
+    right: 0;
+  }
+
+  .title-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 33px;
+    margin-top: 25px;
+  }
+}
+
+.events {
+  margin-bottom: 20px; 
+}
+.follow-us-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.follow-us {
+  display: inline-block;
+  padding: 15px 30px; 
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  background: linear-gradient(135deg, #ff006a, #fe6d04);
+  color: #fff;
+  animation: fadeInUp 1s ease forwards;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  font-size: 18px; 
+}
+
+.follow-us:hover {
+  background: linear-gradient(135deg, #fe6d04, #ff006a);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-logo {
+  max-width: 85px;
+  margin-bottom: 0px; /* Agregado para separar el logo del texto */
+}
+
+.footer-links {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px; /* Agregado para separar los enlaces del texto */
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a,
+.btn-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px; /* Ajusta el tamaño de la fuente de los enlaces */
+}
+
+.footer-links a:hover,
+.btn-link:hover {
+  text-decoration: underline;
+}
+
+.footer-links a:hover {
+  color: #ffc107; /* Cambia el color al pasar el ratón sobre los enlaces */
+}
+
+.btn-link:hover {
+  color: #ffc107; /* Cambia el color al pasar el ratón sobre los botones */
+}
+
+.copyright-img {
+  max-width: 75px;
+  vertical-align: middle; /* Para alinear verticalmente la imagen con el texto */
+  margin-right: 5px; /* Espacio entre la imagen y el texto */
+}
+
+/* Cambia el tamaño de la fuente del texto de "Todos los derechos reservados" */
+.copyright-text {
+  font-size: 18px; /* Ajusta el tamaño de la fuente del texto de derechos reservados */
+}
+.product-container {
+  transition: transform 0.23s ease-in-out;
+}
+
+.product-container:hover {
+  transform: scale(1.05); /* Aumenta el tamaño del producto al 105% */
+}
+
+.carousel-caption h5 {
+  border-radius: 10px; /* Aplica bordes redondeados al contenedor del texto */
+  padding: 10px; /* Agrega espacio interno alrededor del texto */
+  transition: all 0.3s ease; /* Agrega un efecto de transición suave */
+}
+
+.carousel-caption h5:hover {
+  color: rgb(252, 69, 37); /* Cambia el color del texto a azul al pasar el cursor */
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño del texto al pasar el cursor */
+}
+
+.custom-caption {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.custom-caption h5 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #6c757d;
+}
+
+.custom-caption p {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+#event-carousel {
+  border: 2px solid #8a7c7c; /* Color y grosor del borde */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta el contenido que desborda el contenedor */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor del contenedor */
+  margin-bottom: 20px; /* Espacio inferior para separar otros elementos */
+}
+
+#pan-pascua-carousel,
+#cocteleria-carousel {
+  border: 2px solid #8a7c7c; /* Color y grosor del borde */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Oculta el contenido que desborda el contenedor */
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor del contenedor */
+  margin-bottom: 20px; /* Espacio inferior para separar otros elementos */
+}
+
+/* Agrega estas líneas al final de tu archivo CSS */
+
+/* Efecto de transición suave al pasar el cursor sobre el enlace del menú */
+/* Agrega estas líneas al final de tu archivo CSS */
+
+/* Efecto de transición suave al pasar el cursor sobre el enlace del menú */
+.navbar-nav .dropdown-menu {
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Agrega sombra y borde redondeado al menú desplegable */
+.dropdown-menu {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+}
+
+/* Añade un poco de espacio entre los elementos del menú desplegable */
+.dropdown-item {
+  margin: 0.5rem 0;
+}
+
+/* Cambia el color de fondo del menú desplegable al pasar el cursor */
+.dropdown-menu {
+  background-color: #ffffff; /* Color de fondo del menú */
+}
+
+.dropdown-item {
+  color: #000000; /* Color del texto del menú */
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #f8f9fa; /* Color de fondo al pasar el cursor */
+}
+.producto {
+  border-bottom: 1px solid #dee2e6;
+  padding: 10px 0;
+}
+.producto-info {
+  display: flex;
+  align-items: center;
+}
+.producto-info img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.nombre {
+  margin-bottom: 0;
+}
+.precio {
+  margin-bottom: 0;
+  color: green;
+}
+
+.acciones {
+  margin-left: 10px; /* Ajusta el margen izquierdo según sea necesario */
+}
+
+/* Agrega estas líneas al final de tu archivo CSS */
+
+/* Efecto de transición suave al pasar el cursor sobre el enlace del menú */
+.navbar-nav .dropdown-menu {
+  transform: translateY(-10px);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 0.3s ease, opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.navbar-nav .nav-item.dropdown:hover .dropdown-menu {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Agrega sombra y borde redondeado al menú desplegable */
+.dropdown-menu {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  border-radius: 0.5rem;
+}
+
+/* Añade un poco de espacio entre los elementos del menú desplegable */
+.dropdown-item {
+  margin: 0.5rem 0;
+}
+
+/* Cambia el color de fondo del menú desplegable al pasar el cursor */
+.dropdown-menu {
+  background-color: #ffffff; /* Color de fondo del menú */
+}
+
+.dropdown-item {
+  color: #000000; /* Color del texto del menú */
+}
+
+.dropdown-item:hover,
+.dropdown-item:focus {
+  background-color: #f8f9fa; /* Color de fondo al pasar el cursor */
+}
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.card-text {
+  font-size: 18px;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+  border-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+  border-color: #5a6268;
+}
+
+.form-control {
+  border-radius: 25px;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}

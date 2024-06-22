@@ -1,0 +1,57 @@
+{% extends 'reposteria/base.html' %}
+{% load static %}
+{% block contenido %}
+<div class="container mt-5">
+    <h4 class="mb-4 text-center">Ingresa tu consulta, te contactaremos a la brevedad</h4>
+    <div class="row justify-content-center">
+        <div class="col-md-6 mb-4">
+            <div class="card">
+                <div class="card-header">
+                    <h4>Contacto</h4>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-md-6">
+                                <label for="firstname">Nombre</label>
+                                <input type="text" class="form-control" id="firstname" autocomplete="given-name"
+                                    placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label for="lastname">Apellido</label>
+                                <input type="text" class="form-control" id="lastname" autocomplete="family-name"
+                                    placeholder="Tu apellido">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Teléfono</label>
+                            <input type="text" class="form-control" id="phone" autocomplete="tel"
+                                placeholder="Ejemplo: 969696969">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo Electrónico</label>
+                            <input type="email" class="form-control" id="email" autocomplete="email"
+                                placeholder="Furina@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="type">Tipo</label>
+                            <select class="form-control" id="type" autocomplete="off">
+                                <option>--Sin Seleccionar--</option>
+                                <option>Repostería</option>
+                                <option>Eventos</option>
+                                <option>Pan de Pascua</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mensaje</label>
+                            <textarea class="form-control" id="message" autocomplete="off" rows="5"
+                                placeholder="Escribe tu consulta aquí"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Enviar consulta</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
