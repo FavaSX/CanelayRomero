@@ -51,122 +51,76 @@
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <div class="d-flex justify-content-around">
+                        {% for t in tortas_slide1 %}
                         <div class="product-container">
-                            <img src="{% static 'reposteria/images/Tortas/Torta'%} Brownie.jpg" class="img-fluid" alt="Brownie">
+                            {% if t.imagen %}
+                            <img src="{{ t.imagen.url }}" class="img-fluid" alt="Brownie">
+                            {% endif %}
                             <div class="product-info">
-                                <p>Torta Brownie</p>
-                                <p>Precio: $20.000</p>
+                                <p>{{ t.nombre }}</p>
+                                <p>Precio: ${{ t.precio }}</p>
                                 <button class="btn btn-primary"
-                                    onclick="agregarAlCarrito('Torta Brownie', 20000, 'images/Tortas/Torta Brownie.jpg')">Agregar
+                                    onclick="agregarAlCarrito('{{ t.nombre }}', '{{ t.precio }}', '{{ t.imagen.url }}')">Agregar
                                     al
                                     carrito</button>
                             </div>
                         </div>
-                        <div class="product-container">
-                            <img src="{% static 'reposteria/images/Tortas/Torta_1'%}.png" class="img-fluid" alt="Baby Shower">
-                            <div class="product-info">
-                                <p>Torta Baby Shower?</p>
-                                <p>Precio: $15.000</p>
-                                <button class="btn btn-primary"
-                                    onclick="agregarAlCarrito('Torta Baby Shower?', 15000, 'images/Tortas/Torta_1.png')">Agregar
-                                    al
-                                    carrito</button>
-                            </div>
-                        </div>
-                        <div class="product-container">
-                            <img src="{% static 'reposteria/images/Tortas/Bizcocho'%} nuez y manjar.jpg" class="img-fluid"
-                                alt="Torta Bizcocho nuez y manjar">
-                            <div class="product-info">
-                                <p>Torta de bizcocho nuez y manjar</p>
-                                <p>Precio: $20.000</p>
-                                <button class="btn btn-primary"
-                                    onclick="agregarAlCarrito('Torta de bizcocho nuez y manjar', 20000, 'images/Tortas/Bizcocho nuez y manjar.jpg')">Agregar
-                                    al carrito</button>
-                            </div>
-                        </div>
-                        <div class="product-container">
-                            <img src="{% static 'reposteria/images/Tortas/Torta'%} personalizada.jpg" class="img-fluid"
-                                alt="Tortas Personalizadas">
-                            <div class="product-info">
-                                <p>Torta Personalizada</p>
-                                <p>Precio: $25.000</p>
-                                <button class="btn btn-primary"
-                                    onclick="agregarAlCarrito('Torta Personalizada', 25000, 'images/Tortas/Torta personalizada.jpg')">Agregar
-                                    al carrito</button>
-                            </div>
-                        </div>
-                        <div class="product-container">
-                            <img src="{% static 'reposteria/images/Tortas/Torta'%} Cumpleaños.jpg" class="img-fluid" alt="Torta para cumpleaños">
-                            <div class="product-info">
-                                <p>Torta de Cumpleaños</p>
-                                <p>Precio: $30.000</p>
-                                <button class="btn btn-primary"
-                                    onclick="agregarAlCarrito('Torta de Cumpleaños', 30000, 'images/Tortas/Torta Cumpleaños.jpg')">Agregar
-                                    al carrito</button>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
                 <div class="carousel-item">
                     <div class="d-flex justify-content-around">
+                        {% for t in tortas_slide2 %}
                         <div class="product-container">
-                            <img src="https://via.placeholder.com/200x200" class="img-fluid" alt="Torta 6">
+                            {% if t.imagen %}
+                            <img src="{{ t.imagen.url }}" class="img-fluid" alt="Brownie">
+                            {% endif %}
                             <div class="product-info">
-                                <p>Nombre: Torta de Frutas</p>
-                                <p>Precio: $23</p>
-                                <button class="btn btn-primary">Agregar al carrito</button>
-                            </div>
-                        </div>
-                        <div class="product-container">
-                            <img src="https://via.placeholder.com/200x200" class="img-fluid" alt="Torta 7">
-                            <div class="product-info">
-                                <p>Torta de Manzana</p>
-                                <p>Precio: $24</p>
-                                <button class="btn btn-primary">Agregar al carrito</button>
-                            </div>
-                        </div>
-                        <div class="product-container">
-                            <img src="{% static 'reposteria/images/Tortas/Tortas'%}.png" class="img-fluid" alt="Nobile">
-                            <div class="product-info">
-                                <p>Tortas</p>
-                                <p>Precio: $50.000</p>
+                                <p>{{ t.nombre }}</p>
+                                <p>Precio: ${{ t.precio }}</p>
                                 <button class="btn btn-primary"
-                                    onclick="agregarAlCarrito('Tortas', 50000, 'images/Tortas/Tortas.png')">Agregar
+                                    onclick="agregarAlCarrito('{{ t.nombre }}', '{{ t.precio }}', '{{ t.imagen.url }}')">Agregar
                                     al
                                     carrito</button>
                             </div>
                         </div>
+                        {% endfor %}
+                    </div>
+
+                </div>
+                <div class="carousel-item">
+                    <div class="d-flex justify-content-around">
+                        {% for t in tortas_slide3 %}
                         <div class="product-container">
-                            <img src="https://via.placeholder.com/200x200" class="img-fluid" alt="Torta 9">
+                            {% if t.imagen %}
+                            <img src="{{ t.imagen.url }}" class="img-fluid" alt="Brownie">
+                            {% endif %}
                             <div class="product-info">
-                                <p>Nombre: Torta Red Velvet</p>
-                                <p>Precio: $27</p>
-                                <button class="btn btn-primary">Agregar al carrito</button>
+                                <p>{{ t.nombre }}</p>
+                                <p>Precio: ${{ t.precio }}</p>
+                                <button class="btn btn-primary"
+                                    onclick="agregarAlCarrito('{{ t.nombre }}', '{{ t.precio }}', '{{ t.imagen.url }}')">Agregar
+                                    al
+                                    carrito</button>
                             </div>
                         </div>
-                        <div class="product-container">
-                            <img src="https://via.placeholder.com/200x200" class="img-fluid" alt="Torta 10">
-                            <div class="product-info">
-                                <p>Nombre: Torta de Tiramisú</p>
-                                <p>Precio: $26</p>
-                                <button class="btn btn-primary">Agregar al carrito</button>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>
-            <a class="carousel-control-prev" href="#product-carousel" role="button" data-slide="prev">
-                <div class="carousel-arrow-bg"></div>
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="carousel-control-next" href="#product-carousel" role="button" data-slide="next">
-                <div class="carousel-arrow-bg"></div>
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
         </div>
+        <a class="carousel-control-prev" href="#product-carousel" role="button" data-slide="prev">
+            <div class="carousel-arrow-bg"></div>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#product-carousel" role="button" data-slide="next">
+            <div class="carousel-arrow-bg"></div>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
     </div>
+</div>
 </div>
 
 <div id="cocteleria" class="container">
@@ -179,42 +133,34 @@
                 <div class="card-body">
                     <div id="cocteleria-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
                         <div class="carousel-inner">
-                            <div class="carousel-item active">
+                            {% for c in coctels %}
+                            <div class="carousel-item {% if forloop.first %}active{% endif %}">
                                 <div class="text-center">
-                                    <h4>Mango Cream</h4>
-                                    <img src="{% static 'reposteria/images/Cocteleria/Cream'%} Mango.png" class="img-fluid" alt="Mango Cream">
-                                    <p class="card-text mt-3">Precio: $7.300</p>
+                                    <h4>{{ c.nombre }}</h4>
+                                    <img src="{{ c.imagen.url }}"
+                                        class="img-fluid" alt="{{ c.nombre }}">
+                                    <p class="card-text mt-3">Precio: ${{ c.precio }}</p>
                                     <button class="btn btn-primary btn-sm"
-                                        onclick="agregarAlCarrito('Mango Cream', 7300, 'images/Cocteleria/Cream Mango.png')">Agregar
+                                        onclick="agregarAlCarrito('{{ c.nombre }}', '{{ c.precio }}', '{{ c.imagen.url }}')">Agregar
                                         al
                                         carrito</button>
                                 </div>
                             </div>
-                            <div class="carousel-item">
-                                <div class="text-center">
-                                    <h4>Cola de Mono</h4>
-                                    <img src="{% static 'reposteria/images/Cocteleria/Cola'%} de Mono.png" class="img-fluid" alt="Cola de Mono">
-                                    <p class="card-text mt-3">Precio: $8.000</p>
-                                    <button class="btn btn-primary btn-sm"
-                                        onclick="agregarAlCarrito('Cola de Mono', 8000, 'images/Cocteleria/Cola de Mono.png')">Agregar
-                                        al carrito</button>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                         <a class="carousel-control-prev" href="#cocteleria-carousel" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
+                            <span class="sr-only">Anterior</span>
                         </a>
                         <a class="carousel-control-next" href="#cocteleria-carousel" role="button" data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
+                            <span class="sr-only">Siguiente</span>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
         <div class="col-lg-6">
-            <!-- Nuevo carrusel de Panes de Pascua -->
             <div class="text-center mb-2">
                 <h3 class="mt-2 mb-0"><i class="fas fa-gifts" style="font-size: 2rem;"></i> Pan de Pascua</h3>
             </div>
@@ -222,41 +168,29 @@
                 <div class="card-body">
                     <div id="pan-pascua-carousel" class="carousel slide" data-ride="carousel" data-interval="false">
                         <div class="carousel-inner">
-                            <!-- Contenido del carrusel de Panes de Pascua -->
-                            <div class="carousel-item active">
+                            {% for p in pan_pascuas %}
+                            <div class="carousel-item {% if forloop.first %}active{% endif %}">
                                 <div class="text-center">
-                                    <h4>Pan de Pascua con Chispas</h4>
-                                    <img src="{% static 'reposteria/images/Pan de'%} Pascua/Pan de pascua c.png" class="img-fluid"
-                                        alt="Pan de Pascua Tradicional">
-                                    <p class="card-text mt-3">Precio: $5.000</p>
+                                    <h4>{{ p.nombre }}</h4>
+                                    <img src="{{ p.imagen.url }}"
+                                        class="img-fluid" alt="{{ p.nombre }}">
+                                    <p class="card-text mt-3">Precio: ${{ p.precio }}</p>
                                     <button class="btn btn-primary btn-sm"
-                                        onclick="agregarAlCarrito('Pan de Pascua Tradicional', 5000, 'images/Pan de Pascua/Pan de pascua c.png')">Agregar
+                                        onclick="agregarAlCarrito('{{ p.nombre }}', '{{ p.precio }}', '{{ p.imagen.url }}')">Agregar
                                         al carrito</button>
                                 </div>
                             </div>
-                            <!-- Agrega más elementos del carrusel de Panes de Pascua según sea necesario -->
-                            <div class="carousel-item">
-                                <div class="text-center">
-                                    <h4>Pan de Pascua Vegano</h4>
-                                    <img src="{% static 'reposteria/images/Pan de'%} Pascua/PC vegano.png" class="img-fluid"
-                                        alt="Pan de Pascua de Nueces">
-                                    <p class="card-text mt-3">Precio: $6.5000</p>
-                                    <button class="btn btn-primary btn-sm"
-                                        onclick="agregarAlCarrito('Pan de Pascua Vegano', 6500, 'images/Pan de Pascua/PC vegano.png')">Agregar
-                                        al carrito</button>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
-                        <!-- Controles del carrusel de Panes de Pascua -->
                         <a class="carousel-control-prev" href="#pan-pascua-carousel" role="button" data-slide="prev">
                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
+                            <span class="sr-only">Anterior</span>
                         </a>
                         <a class="carousel-control-next" href="#pan-pascua-carousel" role="button" data-slide="next">
                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
+                            <span class="sr-only">Siguiente</span>
                         </a>
-                    </div>
+                    </div>                    
                 </div>
             </div>
         </div>
