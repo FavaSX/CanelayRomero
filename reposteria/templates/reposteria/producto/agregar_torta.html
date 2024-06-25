@@ -12,6 +12,8 @@
                     {% csrf_token %}
                     {{ form | crispy }}
                     <div class="d-flex justify-content-end">
+                        <a href="{% url 'listar_productos' %}" class="btn btn-success">Volver</a>
+                        &nbsp;  
                         <input type="submit" value="Cancelar" class="btn btn-secondary">
                         &nbsp;
                         <input type="submit" value="Guardar" class="btn btn-primary">
