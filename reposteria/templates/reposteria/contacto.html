@@ -11,7 +11,7 @@
                     <h4>Contacto</h4>
                 </div>
                 <div class="card-body">
-                    <form action="" class="formulario_contacto" method="post">
+                    <form action="" class="formulario_contacto" method="post" novalidate>
                         {% csrf_token %}
                         {{ form | crispy }}
                         <br>
@@ -28,4 +28,9 @@
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block scripts %}
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="{% static 'js/form_validation.js' %}"></script>
 {% endblock %}
