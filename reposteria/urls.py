@@ -9,7 +9,6 @@ from .views import (
 urlpatterns = [
     path('', home, name="home"),
     path('contacto/', contacto, name="contacto"),
-    path('login/', login, name="login"),
     path('registro/', registro, name="registro"),
     path('sobre_nosotros/', sobre_nosotros, name="sobre_nosotros"),
     path('agregar-torta/', user_passes_test(lambda u: u.is_superuser)(agregar_torta), name="agregar_torta"),
